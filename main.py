@@ -3,8 +3,6 @@ nric = input('Enter an NRIC number: ')
 # Type your code below
 
 check = 'invalid'
-sum = 0
-count = 0
 weight = [2,7,6,5,4,3,2]
 Grp1 = ["J","Z","I","H","G","F","E","D","C","B","A"]
 Grp2 = ["X","W","U","T","R","Q","P","N","M","L","K"]
@@ -16,9 +14,7 @@ if len(nric) == 9:
     if (nric[8]).isalpha:
       b = nric[8]
       new = nric[1:8]
-      for x in new:
-        sum += (int(x)*weight[count])
-        count += 1
+      sum = (int(new[0]) * weight[0]) + (int(new[1]) * weight[1]) + (int(new[2]) * weight[2]) + (int(new[3]) * weight[3]) + (int(new[4]) * weight[4]) + (int(new[5]) * weight[5]) + (int(new[6]) * weight[6])
       if a == "T" or a == "G":
         sum += 4
       r = (sum % 11) 
